@@ -1,0 +1,17 @@
+<form action='/contact' method='get'>
+  <label>Contact Us</label>
+  <hr/>
+  <label>Name</label>
+  <input type='text' name='name'>
+  <label>Email</label>
+  <input type='text' name='email'>
+
+  <button>Send</button>
+</form>
+
+<% if @name %>
+  <header>
+    <h1>Thank you for contacting us <%= @name %>.</h1>
+  </header>
+  <p>We will be in touch shortly using the following email address: <%= @email %> </p>
+  <% end %>
